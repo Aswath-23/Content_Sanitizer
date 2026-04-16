@@ -1,27 +1,76 @@
 # Social Media Content Sanitizer
+---
 
-A simple Python script that scans school social media posts, masks banned words with `***`, extracts URLs, and produces a moderator report.
+## Objective
 
-## Requirements satisfied
+* Detects and masks **banned words**
+* Extracts **web links** for security checking
+* Tracks **user violations**
+* Generates a **final moderation report**
 
-- List processing using a list of sample posts.
-- Word masking with `banned_words = ["bad", "toxic", "hate"]` and `.replace()`.
-- Link extraction using `startswith('http')`.
-- Summary dictionary that counts moderator flags per user.
-- Final report with total posts screened, cleaned posts, and blocked posts.
+---
 
-## Files
+## Features
 
-- `content_sanitizer.py`: main script
-- `sample_posts.txt`: sample posts input
-- `links_found.txt`: generated output with found links
+### 🔹 Word Filtering
 
-## Run
+* Replaces banned words like `bad`, `toxic`, `hate` with `***`
 
-Open a terminal in this folder and run:
+### 🔹 Link Extraction
 
-```bash
-python content_sanitizer.py
+* Detects all URLs (http/https) from posts
+* Saves them into a file for review
+
+### 🔹 User Monitoring
+
+* Tracks how many times each user posts flagged content
+
+### 🔹 Report Generation
+
+* Displays:
+
+  * Total posts screened
+  * Cleaned posts count
+  * Flagged posts count
+  * User-wise violations
+
+---
+
+## Technologies Used
+
+* Python 
+* Regular Expressions (`re` module)
+* File Handling
+
+---
+
+## Output
+
+###  Cleaned Posts
+
+```
+User123: I *** this app! Visit http://badsite.com
+User123: You are ***! Check https://spamlink.com now
 ```
 
-The script writes links to `links_found.txt` and prints a final report.
+###  Extracted Links (`links_found.txt`)
+
+```
+http://badsite.com
+https://spamlink.com
+```
+
+###  Final Report
+
+```
+Total Posts Screened: 5
+Cleaned Posts: 4
+Blocked/Flagged Posts: 4
+```
+---
+
+## Run the program:
+
+```
+python main.py
+```
