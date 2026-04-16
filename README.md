@@ -74,3 +74,7 @@ Blocked/Flagged Posts: 4
 ```
 python main.py
 ```
+---
+
+## Output
+<img width="972" height="430" alt="image" src="https://github.com/user-attachments/assets/0ba4ad0f-db43-4f69-9a88-a51bf5ace002" />
