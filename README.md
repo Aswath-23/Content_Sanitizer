@@ -12,20 +12,20 @@
 
 ## Features
 
-### 🔹 Word Filtering
+### 1 Word Filtering
 
 * Replaces banned words like `bad`, `toxic`, `hate` with `***`
 
-### 🔹 Link Extraction
+### 2 Link Extraction
 
 * Detects all URLs (http/https) from posts
 * Saves them into a file for review
 
-### 🔹 User Monitoring
+### 3 User Monitoring
 
 * Tracks how many times each user posts flagged content
 
-### 🔹 Report Generation
+### 4 Report Generation
 
 * Displays:
 
